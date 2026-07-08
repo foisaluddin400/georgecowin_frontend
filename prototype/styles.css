@@ -303,6 +303,111 @@ button {
   padding: 20px;
 }
 
+.portal-choice-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 22px;
+  background: radial-gradient(circle at top left, rgba(31, 107, 82, 0.12), transparent 34%), var(--page);
+}
+
+.portal-choice-panel {
+  width: min(1080px, 100%);
+  display: grid;
+  gap: 24px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: clamp(24px, 4vw, 42px);
+}
+
+.portal-main-logo {
+  width: min(340px, 74vw);
+  height: auto;
+  display: block;
+}
+
+.portal-choice-copy {
+  display: grid;
+  gap: 8px;
+}
+
+.portal-choice-copy h1 {
+  margin: 0;
+  font-size: clamp(38px, 7vw, 78px);
+  line-height: 0.96;
+}
+
+.portal-choice-copy p {
+  max-width: 760px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.portal-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.portal-choice-card {
+  min-height: 260px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfcfa;
+  color: var(--ink);
+  padding: 24px;
+  display: grid;
+  gap: 12px;
+  justify-items: start;
+  text-align: left;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.portal-choice-card:hover,
+.portal-choice-card:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--green);
+  box-shadow: 0 14px 34px rgba(31, 107, 82, 0.14);
+}
+
+.portal-choice-card img {
+  width: min(260px, 100%);
+  max-height: 94px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.portal-choice-card span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.portal-choice-card strong {
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1;
+}
+
+.portal-choice-card small {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.portal-choice-card.creators {
+  background: #17221f;
+  color: #ffffff;
+}
+
+.portal-choice-card.creators small,
+.portal-choice-card.creators span {
+  color: rgba(255, 255, 255, 0.72);
+}
+
 .login-panel {
   width: min(920px, 100%);
   background: var(--panel);
@@ -351,6 +456,79 @@ button {
   gap: 18px;
 }
 
+.collective-login-panel {
+  border-color: #cfd8dc;
+}
+
+.collective-login-intro {
+  background: #f4f7f1;
+  color: var(--ink);
+}
+
+.collective-login-intro p {
+  color: var(--muted);
+}
+
+.collective-login-logo {
+  max-height: 120px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.collective-sidebar {
+  background: #f4f7f1;
+  color: var(--ink);
+  border-right: 1px solid var(--line);
+}
+
+.collective-brand {
+  border-bottom-color: var(--line);
+}
+
+.collective-brand span,
+.collective-sidebar .user-card span {
+  color: var(--muted);
+}
+
+.collective-brand-logo {
+  width: min(178px, 100%);
+  max-height: 58px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.collective-sidebar .nav button {
+  color: #485158;
+}
+
+.collective-sidebar .nav button.active,
+.collective-sidebar .nav button:hover {
+  background: #e6ece8;
+  color: var(--ink);
+}
+
+.collective-sidebar .user-card {
+  border-color: var(--line);
+}
+
+.collective-sidebar .ghost {
+  background: #e6ece8;
+  color: var(--ink);
+}
+
+.collective-sidebar .sidebar-target {
+  border-color: var(--line);
+  background: #ffffff;
+}
+
+.collective-sidebar .sidebar-target span {
+  color: var(--muted);
+}
+
+.collective-sidebar .sidebar-target strong {
+  color: var(--green);
+}
+
 .field {
   display: grid;
   gap: 7px;
@@ -380,6 +558,78 @@ button {
   min-height: 88px;
   padding: 10px 12px;
   resize: vertical;
+}
+
+.field-hint {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.collective-payment-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.collective-payment-grid label {
+  display: grid;
+  gap: 5px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfcfa;
+  padding: 8px;
+}
+
+.collective-payment-grid span {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.collective-payment-grid input {
+  min-height: 34px;
+  padding: 0 8px;
+}
+
+.xero-status-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfcfa;
+  padding: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.xero-status-card strong,
+.xero-status-card span {
+  display: block;
+}
+
+.xero-status-card span {
+  color: var(--muted);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.collective-quarter-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.quarter-column {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+}
+
+.quarter-column h3 {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  text-transform: uppercase;
 }
 
 .checkbox-field {
@@ -2192,16 +2442,32 @@ select:disabled {
   .invoice-summary-grid,
   .report-stage-grid,
   .layout,
+  .portal-choice-grid,
+  .collective-quarter-list,
   .login-panel {
     grid-template-columns: 1fr;
+  }
+
+  .collective-payment-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 620px) {
   .main,
+  .portal-choice-panel,
   .login-form,
   .login-intro {
     padding: 22px;
+  }
+
+  .portal-choice-card {
+    min-height: 220px;
+    padding: 18px;
+  }
+
+  .collective-payment-grid {
+    grid-template-columns: 1fr;
   }
 
   .crm-detail-overlay,

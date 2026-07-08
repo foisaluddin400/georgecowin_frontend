@@ -310,6 +310,111 @@ button {
   padding: 20px;
 }
 
+.portal-choice-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 22px;
+  background: radial-gradient(circle at top left, rgba(31, 107, 82, 0.12), transparent 34%), var(--page);
+}
+
+.portal-choice-panel {
+  width: min(1080px, 100%);
+  display: grid;
+  gap: 24px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: clamp(24px, 4vw, 42px);
+}
+
+.portal-main-logo {
+  width: min(340px, 74vw);
+  height: auto;
+  display: block;
+}
+
+.portal-choice-copy {
+  display: grid;
+  gap: 8px;
+}
+
+.portal-choice-copy h1 {
+  margin: 0;
+  font-size: clamp(38px, 7vw, 78px);
+  line-height: 0.96;
+}
+
+.portal-choice-copy p {
+  max-width: 760px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.portal-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.portal-choice-card {
+  min-height: 260px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfcfa;
+  color: var(--ink);
+  padding: 24px;
+  display: grid;
+  gap: 12px;
+  justify-items: start;
+  text-align: left;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.portal-choice-card:hover,
+.portal-choice-card:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--green);
+  box-shadow: 0 14px 34px rgba(31, 107, 82, 0.14);
+}
+
+.portal-choice-card img {
+  width: min(260px, 100%);
+  max-height: 94px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.portal-choice-card span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.portal-choice-card strong {
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1;
+}
+
+.portal-choice-card small {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.portal-choice-card.creators {
+  background: #17221f;
+  color: #ffffff;
+}
+
+.portal-choice-card.creators small,
+.portal-choice-card.creators span {
+  color: rgba(255, 255, 255, 0.72);
+}
+
 .login-panel {
   width: min(920px, 100%);
   background: var(--panel);
@@ -358,6 +463,79 @@ button {
   gap: 18px;
 }
 
+.collective-login-panel {
+  border-color: #cfd8dc;
+}
+
+.collective-login-intro {
+  background: #f4f7f1;
+  color: var(--ink);
+}
+
+.collective-login-intro p {
+  color: var(--muted);
+}
+
+.collective-login-logo {
+  max-height: 120px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.collective-sidebar {
+  background: #f4f7f1;
+  color: var(--ink);
+  border-right: 1px solid var(--line);
+}
+
+.collective-brand {
+  border-bottom-color: var(--line);
+}
+
+.collective-brand span,
+.collective-sidebar .user-card span {
+  color: var(--muted);
+}
+
+.collective-brand-logo {
+  width: min(178px, 100%);
+  max-height: 58px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.collective-sidebar .nav button {
+  color: #485158;
+}
+
+.collective-sidebar .nav button.active,
+.collective-sidebar .nav button:hover {
+  background: #e6ece8;
+  color: var(--ink);
+}
+
+.collective-sidebar .user-card {
+  border-color: var(--line);
+}
+
+.collective-sidebar .ghost {
+  background: #e6ece8;
+  color: var(--ink);
+}
+
+.collective-sidebar .sidebar-target {
+  border-color: var(--line);
+  background: #ffffff;
+}
+
+.collective-sidebar .sidebar-target span {
+  color: var(--muted);
+}
+
+.collective-sidebar .sidebar-target strong {
+  color: var(--green);
+}
+
 .field {
   display: grid;
   gap: 7px;
@@ -387,6 +565,78 @@ button {
   min-height: 88px;
   padding: 10px 12px;
   resize: vertical;
+}
+
+.field-hint {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.collective-payment-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.collective-payment-grid label {
+  display: grid;
+  gap: 5px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfcfa;
+  padding: 8px;
+}
+
+.collective-payment-grid span {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.collective-payment-grid input {
+  min-height: 34px;
+  padding: 0 8px;
+}
+
+.xero-status-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fbfcfa;
+  padding: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.xero-status-card strong,
+.xero-status-card span {
+  display: block;
+}
+
+.xero-status-card span {
+  color: var(--muted);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.collective-quarter-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.quarter-column {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+}
+
+.quarter-column h3 {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  text-transform: uppercase;
 }
 
 .checkbox-field {
@@ -2199,16 +2449,32 @@ select:disabled {
   .invoice-summary-grid,
   .report-stage-grid,
   .layout,
+  .portal-choice-grid,
+  .collective-quarter-list,
   .login-panel {
     grid-template-columns: 1fr;
+  }
+
+  .collective-payment-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 620px) {
   .main,
+  .portal-choice-panel,
   .login-form,
   .login-intro {
     padding: 22px;
+  }
+
+  .portal-choice-card {
+    min-height: 220px;
+    padding: 18px;
+  }
+
+  .collective-payment-grid {
+    grid-template-columns: 1fr;
   }
 
   .crm-detail-overlay,
@@ -2299,6 +2565,13 @@ const staffRoles = ["manager", "finance", "operations", "production"];
 const productionItems = ["Producer", "DOP", "Editor"];
 const defaultProductionRates = { Producer: 650, DOP: 850, Editor: 450 };
 const usdToGbpRate = 0.78;
+const collectiveStages = ["Conversation", "Negotiation", "Contract Signed", "To Be Invoiced", "Invoiced", "Paid"];
+const collectiveSalesUsers = [
+  { id: "collective-admin", name: "Collective Admin", role: "admin", email: "admin@cowshedcollective.test" },
+  { id: "collective-george", name: "George", role: "sales", email: "george@cowshedcollective.test" },
+  { id: "collective-mia", name: "Mia", role: "sales", email: "mia@cowshedcollective.test" },
+  { id: "collective-james", name: "James", role: "sales", email: "james@cowshedcollective.test" }
+];
 const paymentTerms = [
   { label: "Upfront", value: "upfront", days: 0 },
   { label: "30 days", value: "30", days: 30 },
@@ -2438,8 +2711,73 @@ const sampleDeals = [
   { id: "sample-alex-talent-film", managerId: "alex", talentName: "Alex Talent", status: "Pipeline", campaignName: "Streaming premiere", monthValues: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 19500, 0], costRate: 80 }
 ];
 
+const defaultCollectiveDeals = [
+  {
+    id: "collective-sample-retail-launch",
+    ownerId: "collective-george",
+    company: "John Lewis",
+    dealName: "Retail creator strategy",
+    contactName: "Priya Shah",
+    emailContact: "priya.shah@johnlewis.example",
+    stage: "Negotiation",
+    amount: 84000,
+    paymentTerm: "30",
+    customPaymentDays: 0,
+    monthValues: [0, 28000, 0, 28000, 0, 28000, 0, 0, 0, 0, 0, 0],
+    xeroOrg: "Cowshed Collective Sales",
+    xeroInvoiceId: "",
+    xeroStatus: "",
+    notes: "Split across campaign planning, launch and reporting.",
+    updatedAt: "2026-07-03T08:00:00.000Z"
+  },
+  {
+    id: "collective-sample-hospitality",
+    ownerId: "collective-mia",
+    company: "Soho House",
+    dealName: "Membership content partnership",
+    contactName: "Alex Green",
+    emailContact: "alex.green@sohohouse.example",
+    stage: "Contract Signed",
+    amount: 56000,
+    paymentTerm: "45",
+    customPaymentDays: 0,
+    monthValues: [0, 0, 0, 0, 28000, 0, 28000, 0, 0, 0, 0, 0],
+    xeroOrg: "Cowshed Collective Sales",
+    xeroInvoiceId: "",
+    xeroStatus: "",
+    notes: "Awaiting final PO before invoicing.",
+    updatedAt: "2026-07-03T08:05:00.000Z"
+  },
+  {
+    id: "collective-sample-tech",
+    ownerId: "collective-james",
+    company: "Samsung",
+    dealName: "Always-on social retainer",
+    contactName: "Nadia Wells",
+    emailContact: "nadia.wells@samsung.example",
+    stage: "To Be Invoiced",
+    amount: 120000,
+    paymentTerm: "60",
+    customPaymentDays: 0,
+    monthValues: [0, 0, 0, 0, 0, 30000, 30000, 30000, 30000, 0, 0, 0],
+    xeroOrg: "Cowshed Collective Sales",
+    xeroInvoiceId: "CC-XERO-DRAFT-1024",
+    xeroStatus: "Draft invoice created in Collective Xero",
+    notes: "Different Xero organisation to Creators.",
+    updatedAt: "2026-07-03T08:10:00.000Z"
+  }
+];
+
 const state = {
+  portal: null,
   user: null,
+  collectiveUser: null,
+  activeCollectiveView: "collective-crm",
+  collectiveAddOpen: false,
+  collectiveSelectedDealId: null,
+  collectiveStageFilter: "all",
+  collectiveOwnerFilter: "all",
+  collectiveMonthFilter: "all",
   activeView: "pl-live",
   activeDealList: "all",
   selectedDealManagerId: "all",
@@ -2517,6 +2855,7 @@ const state = {
   eventRequests: normalizeEventRequests(loadJSON("creator-pl-event-requests", [])),
   brandDatabase: normalizeBrandDatabase(loadJSON("creator-pl-brand-database", {})),
   navOrders: loadJSON("creator-pl-nav-orders", {}),
+  collectiveDeals: normalizeCollectiveDeals(loadJSON("collective-sales-crm-deals", defaultCollectiveDeals)),
   deals: [],
   crmDeals: []
 };
@@ -2983,6 +3322,36 @@ function normalizeBrandDatabase(value) {
   return records;
 }
 
+function normalizeCollectiveDeals(value) {
+  if (!Array.isArray(value)) return [];
+  return value.map((deal) => {
+    const ownerId = collectiveSalesUsers.some((user) => user.id === deal.ownerId) ? deal.ownerId : "collective-george";
+    const paymentTerm = paymentTerms.some((term) => term.value === deal.paymentTerm) ? deal.paymentTerm : "30";
+    const monthValues = months.map((_, index) => Number((deal.monthValues || [])[index] || 0));
+    const amount = Number(deal.amount || sum(monthValues) || 0);
+    return {
+      id: deal.id || `collective-${Date.now()}-${Math.random()}`,
+      ownerId,
+      company: String(deal.company || "").trim(),
+      dealName: String(deal.dealName || deal.campaignName || "").trim(),
+      contactName: String(deal.contactName || "").trim(),
+      emailContact: normalizeEmailContacts(deal.emailContact),
+      stage: collectiveStages.includes(deal.stage) ? deal.stage : "Conversation",
+      amount,
+      paymentTerm,
+      customPaymentDays: Math.max(0, Number(deal.customPaymentDays || 0)),
+      monthValues,
+      xeroOrg: deal.xeroOrg || "Cowshed Collective Sales",
+      xeroInvoiceId: String(deal.xeroInvoiceId || ""),
+      xeroStatus: String(deal.xeroStatus || ""),
+      xeroCreatedAt: String(deal.xeroCreatedAt || ""),
+      xeroPaidAt: String(deal.xeroPaidAt || ""),
+      notes: String(deal.notes || "").trim(),
+      updatedAt: deal.updatedAt || new Date().toISOString()
+    };
+  }).filter((deal) => deal.company && deal.dealName);
+}
+
 function cleanTalentName(name, managerId) {
   const manager = managerName(managerId);
   if (!name || name === "New Creator" || name === "Split Commission") return (state.talents[managerId] || [])[0] || "";
@@ -3082,6 +3451,7 @@ function saveState() {
   saveJSON("creator-pl-event-requests", state.eventRequests);
   saveJSON("creator-pl-brand-database", state.brandDatabase);
   saveJSON("creator-pl-nav-orders", state.navOrders);
+  saveJSON("collective-sales-crm-deals", state.collectiveDeals);
   saveJSON("creator-pl-deals", state.deals);
   saveJSON("creator-pl-crm-deals", state.crmDeals);
 }
@@ -3878,6 +4248,18 @@ function rosterRowsForManager(managerId) {
 
 function app() {
   const root = document.querySelector("#app");
+  if (!state.portal) {
+    root.innerHTML = portalChoiceView();
+    bindPortalChoice();
+    return;
+  }
+
+  if (state.portal === "collective") {
+    root.innerHTML = state.collectiveUser ? collectiveShellView() : collectiveLoginView();
+    state.collectiveUser ? bindCollectiveShell() : bindCollectiveLogin();
+    return;
+  }
+
   if (!state.user) {
     root.innerHTML = loginView();
     bindLogin();
@@ -3905,6 +4287,7 @@ function app() {
           <strong>${state.user.name}</strong>
           <span>${roleLabel()} access</span>
           <button class="ghost" data-logout>Sign out</button>
+          <button class="ghost" data-back-to-portals>All portals</button>
         </div>
       </aside>
       <main class="main">${viewTemplate()}</main>
@@ -3933,6 +4316,35 @@ function saveNavOrderFromDom() {
   saveState();
 }
 
+function portalChoiceView() {
+  return `
+    <main class="portal-choice-page">
+      <section class="portal-choice-panel">
+        <img class="portal-main-logo" src="cowshed-collective-logo.png" alt="Cowshed Collective" />
+        <div class="portal-choice-copy">
+          <p class="eyebrow">Choose portal</p>
+          <h1>Cowshed workspace</h1>
+          <p>Select the business you want to work in. Creators opens the existing talent portal; Collective Sales opens the separate sales CRM and cashflow view.</p>
+        </div>
+        <div class="portal-choice-grid">
+          <button class="portal-choice-card creators" type="button" data-portal-select="creators">
+            <img src="cowshed-creators-logo.png" alt="Cowshed Creators" />
+            <span>Cowshed Creators</span>
+            <strong>Creators portal</strong>
+            <small>P&L, talent CRM, reports, production, expenses and invoices.</small>
+          </button>
+          <button class="portal-choice-card collective" type="button" data-portal-select="collective">
+            <img src="cowshed-collective-logo.png" alt="Cowshed Collective" />
+            <span>Cowshed Collective</span>
+            <strong>Sales CRM</strong>
+            <small>Sales pipeline, Collective Xero status, monthly cash due and quarter view.</small>
+          </button>
+        </div>
+      </section>
+    </main>
+  `;
+}
+
 function loginView() {
   return `
     <main class="login-page">
@@ -3958,10 +4370,471 @@ function loginView() {
             </select>
           </div>
           <button class="primary" type="submit">Continue</button>
+          <button class="secondary" type="button" data-back-to-portals>Back to portal selection</button>
         </form>
       </section>
     </main>
   `;
+}
+
+function collectiveLoginView() {
+  return `
+    <main class="login-page">
+      <section class="login-panel collective-login-panel">
+        <div class="login-intro collective-login-intro">
+          <div>
+            <p class="eyebrow">Cowshed Collective</p>
+            <img class="login-logo collective-login-logo" src="cowshed-collective-logo.png" alt="Cowshed Collective" />
+            <h1>Sales CRM</h1>
+            <p>A separate sales workspace with its own CRM, payment schedule and simulated Collective Xero status.</p>
+          </div>
+          <div class="notice">Prototype login: choose a Collective sales profile to test the separate business workspace.</div>
+        </div>
+        <form class="login-form" data-collective-login-form>
+          <div>
+            <p class="eyebrow">Sign in</p>
+            <h2>Choose sales access</h2>
+          </div>
+          <div class="field">
+            <label for="collectiveProfile">Profile</label>
+            <select id="collectiveProfile" name="profile">
+              ${collectiveSalesUsers.map((user) => `<option value="${user.id}">${user.name} - ${collectiveRoleLabel(user)}</option>`).join("")}
+            </select>
+          </div>
+          <button class="primary" type="submit">Continue</button>
+          <button class="secondary" type="button" data-back-to-portals>Back to portal selection</button>
+        </form>
+      </section>
+    </main>
+  `;
+}
+
+function collectiveRoleLabel(user = state.collectiveUser) {
+  if (user?.role === "admin") return "Admin";
+  return "Sales";
+}
+
+function collectiveUserName(id) {
+  return (collectiveSalesUsers.find((user) => user.id === id) || {}).name || "Unassigned";
+}
+
+function collectiveHeader(title, subtitle) {
+  return `
+    <div class="topbar">
+      <div>
+        <p class="eyebrow">Cowshed Collective Sales</p>
+        <h1>${title}</h1>
+      </div>
+      <div class="asof">${subtitle}</div>
+    </div>
+  `;
+}
+
+function collectiveShellView() {
+  const views = [
+    { id: "collective-crm", label: "CRM" },
+    { id: "collective-months", label: "Deals by month" },
+    { id: "collective-quarters", label: "Quarter view" }
+  ];
+  if (!views.some((view) => view.id === state.activeCollectiveView)) state.activeCollectiveView = "collective-crm";
+  const totalPipeline = collectiveFilteredDeals(false).reduce((total, deal) => total + collectiveDealTotal(deal), 0);
+  return `
+    <div class="shell collective-shell">
+      <aside class="sidebar collective-sidebar">
+        <div class="brand collective-brand">
+          <img class="brand-logo collective-brand-logo" src="cowshed-collective-logo.png" alt="Cowshed Collective" />
+          <span>Sales CRM</span>
+          <div class="sidebar-target target-hit">
+            <div>
+              <span>Visible pipeline</span>
+              <strong>${money(totalPipeline)}</strong>
+            </div>
+            <div>
+              <span>Xero organisation</span>
+              <strong>Collective</strong>
+            </div>
+          </div>
+        </div>
+        <nav class="nav">
+          ${views.map((view) => `<button class="${state.activeCollectiveView === view.id ? "active" : ""}" data-collective-view="${view.id}"><span class="nav-text">${view.label}</span></button>`).join("")}
+        </nav>
+        <div class="user-card">
+          <strong>${state.collectiveUser.name}</strong>
+          <span>${collectiveRoleLabel()} access</span>
+          <button class="ghost" data-collective-logout>Sign out</button>
+          <button class="ghost" data-back-to-portals>All portals</button>
+        </div>
+      </aside>
+      <main class="main">${collectiveViewTemplate()}</main>
+    </div>
+  `;
+}
+
+function collectiveViewTemplate() {
+  if (state.activeCollectiveView === "collective-months") return collectiveDealsByMonthView();
+  if (state.activeCollectiveView === "collective-quarters") return collectiveQuarterView();
+  return collectiveCrmView();
+}
+
+function collectiveVisibleDeals() {
+  if (state.collectiveUser?.role === "admin") return state.collectiveDeals;
+  return state.collectiveDeals.filter((deal) => deal.ownerId === state.collectiveUser?.id);
+}
+
+function collectiveFilteredDeals(applyStageFilter = true) {
+  return collectiveVisibleDeals()
+    .filter((deal) => state.collectiveOwnerFilter === "all" || deal.ownerId === state.collectiveOwnerFilter)
+    .filter((deal) => !applyStageFilter || state.collectiveStageFilter === "all" || deal.stage === state.collectiveStageFilter)
+    .sort((a, b) => collectiveStages.indexOf(a.stage) - collectiveStages.indexOf(b.stage) || a.company.localeCompare(b.company));
+}
+
+function collectiveDealTotal(deal) {
+  return Number(deal.amount || sum(deal.monthValues || []));
+}
+
+function collectiveScheduledTotal(deal) {
+  return sum(deal.monthValues || []);
+}
+
+function collectivePaymentLabel(deal) {
+  if (deal.paymentTerm === "custom") return `${Number(deal.customPaymentDays || 0)} days`;
+  return (paymentTerms.find((term) => term.value === deal.paymentTerm) || paymentTerms[1]).label;
+}
+
+function collectiveStageClass(stage) {
+  return `stage-${stage.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`;
+}
+
+function collectiveCrmView() {
+  const deals = collectiveFilteredDeals();
+  const selectedDeal = state.collectiveDeals.find((deal) => deal.id === state.collectiveSelectedDealId);
+  const visibleOwners = state.collectiveUser?.role === "admin" ? collectiveSalesUsers : [state.collectiveUser];
+  return `
+    ${collectiveHeader("Sales CRM", "Separate CRM and Xero flow for Cowshed Collective")}
+    <section class="section">
+      <div class="section-head">
+        <h2>CRM summary</h2>
+        <span class="pill">${money(deals.reduce((total, deal) => total + collectiveDealTotal(deal), 0))}</span>
+      </div>
+      <div class="section-body earnings-grid">
+        ${collectiveStages.map((stage) => {
+          const stageDeals = deals.filter((deal) => deal.stage === stage);
+          return `<div class="earning"><span>${stage}</span><strong>${money(stageDeals.reduce((total, deal) => total + collectiveDealTotal(deal), 0))}</strong><small>${stageDeals.length} deals</small></div>`;
+        }).join("")}
+      </div>
+    </section>
+    <section class="section crm-board-section">
+      <div class="section-head">
+        <h2>Deals by stage</h2>
+        <div class="section-actions">
+          <button class="primary add-crm-toggle" type="button" data-collective-add-toggle>${state.collectiveAddOpen ? "Close add deal" : "Add sales deal"}</button>
+          ${state.collectiveUser?.role === "admin" ? `
+            <select class="compact-select" data-collective-filter="owner">
+              <option value="all" ${state.collectiveOwnerFilter === "all" ? "selected" : ""}>All salespeople</option>
+              ${collectiveSalesUsers.map((user) => `<option value="${user.id}" ${state.collectiveOwnerFilter === user.id ? "selected" : ""}>${user.name}</option>`).join("")}
+            </select>
+          ` : ""}
+          <select class="compact-select" data-collective-filter="stage">
+            <option value="all" ${state.collectiveStageFilter === "all" ? "selected" : ""}>All stages</option>
+            ${collectiveStages.map((stage) => `<option value="${stage}" ${state.collectiveStageFilter === stage ? "selected" : ""}>${stage}</option>`).join("")}
+          </select>
+        </div>
+      </div>
+      ${collectiveStageBoard(deals)}
+    </section>
+    ${state.collectiveAddOpen ? collectiveAddDealOverlay(visibleOwners) : ""}
+    ${selectedDeal ? collectiveDealDetailOverlay(selectedDeal) : ""}
+  `;
+}
+
+function collectiveStageBoard(deals) {
+  return `
+    <div class="crm-board collective-crm-board">
+      ${collectiveStages.map((stage) => {
+        const stageDeals = deals.filter((deal) => deal.stage === stage);
+        const stageTotal = stageDeals.reduce((total, deal) => total + collectiveDealTotal(deal), 0);
+        return `
+          <div class="crm-column ${collectiveStageClass(stage)}" data-collective-stage-drop="${stage}">
+            <div class="crm-column-head">
+              <span>${stage}</span>
+              <strong>${money(stageTotal)}</strong>
+            </div>
+            <div class="crm-card-list" data-collective-stage-drop="${stage}">
+              ${stageDeals.length ? stageDeals.map((deal) => collectiveDealCard(deal)).join("") : `<div class="crm-empty">No deals</div>`}
+            </div>
+          </div>
+        `;
+      }).join("")}
+    </div>
+  `;
+}
+
+function collectiveDealCard(deal) {
+  return `
+    <button class="crm-card ${state.collectiveSelectedDealId === deal.id ? "active" : ""}" data-collective-detail="${deal.id}" data-collective-drag="${deal.id}" draggable="true">
+      <strong>${htmlSafe(deal.company)}</strong>
+      <span>${htmlSafe(deal.dealName)} · ${money(collectiveDealTotal(deal))}</span>
+      <small>${collectiveUserName(deal.ownerId)} · ${deal.emailContact || "No email contact"}</small>
+      <div class="crm-tags">
+        <em>${collectivePaymentLabel(deal)}</em>
+        ${deal.xeroInvoiceId ? `<em>${deal.xeroInvoiceId}</em>` : `<em>Collective Xero</em>`}
+      </div>
+    </button>
+  `;
+}
+
+function collectiveAddDealOverlay(owners) {
+  const ownerOptions = owners.filter(Boolean);
+  return `
+    <div class="crm-add-overlay" data-collective-add-overlay>
+      <section class="section crm-add-panel open" role="dialog" aria-modal="true" aria-label="Add Collective sales deal">
+        <button class="crm-detail-close" type="button" data-collective-add-close aria-label="Close add sales deal">×</button>
+        <div class="section-head"><h2>Add sales deal</h2><span class="pill confirmed">Collective Xero</span></div>
+        <div class="section-body">
+          <form class="form-grid" data-collective-deal-form>
+            <div class="field">
+              <label for="collectiveOwnerId">Sales owner</label>
+              <select id="collectiveOwnerId" name="ownerId" ${state.collectiveUser?.role === "admin" ? "" : "disabled"}>
+                ${ownerOptions.map((user) => `<option value="${user.id}" ${user.id === state.collectiveUser?.id ? "selected" : ""}>${user.name}</option>`).join("")}
+              </select>
+            </div>
+            <div class="field">
+              <label for="collectiveStage">Stage</label>
+              <select id="collectiveStage" name="stage">${collectiveStages.map((stage) => `<option>${stage}</option>`).join("")}</select>
+            </div>
+            <div class="field">
+              <label for="collectiveCompany">Company</label>
+              <input id="collectiveCompany" name="company" required placeholder="Client name" />
+            </div>
+            <div class="field">
+              <label for="collectiveDealName">Deal name</label>
+              <input id="collectiveDealName" name="dealName" required placeholder="Campaign, retainer, project" />
+            </div>
+            <div class="field">
+              <label for="collectiveAmount">Deal amount</label>
+              <input id="collectiveAmount" name="amount" required type="number" min="0" step="0.01" placeholder="0.00" />
+            </div>
+            <div class="field">
+              <label for="collectivePaymentTerm">Payment terms</label>
+              <select id="collectivePaymentTerm" name="paymentTerm">${paymentTerms.map((term) => `<option value="${term.value}">${term.label}</option>`).join("")}</select>
+            </div>
+            <div class="field">
+              <label for="collectiveCustomDays">Own time in days</label>
+              <input id="collectiveCustomDays" name="customPaymentDays" type="number" min="0" step="1" placeholder="Only if custom" />
+            </div>
+            <div class="field">
+              <label for="collectiveContactName">Contact name</label>
+              <input id="collectiveContactName" name="contactName" placeholder="Client contact" />
+            </div>
+            <div class="field">
+              <label for="collectiveEmail">Email addresses</label>
+              <input id="collectiveEmail" name="emailContact" type="text" placeholder="client@company.com, finance@company.com" />
+            </div>
+            <div class="field wide">
+              <label for="collectiveNotes">Notes</label>
+              <textarea id="collectiveNotes" name="notes" placeholder="Commercial notes, scope, Xero context"></textarea>
+            </div>
+            <div class="field wide">
+              <label>Payment months</label>
+              <div class="collective-payment-grid">
+                ${months.map((month, index) => `
+                  <label>
+                    <span>${month}</span>
+                    <input name="month-${index}" type="number" min="0" step="0.01" placeholder="0" />
+                  </label>
+                `).join("")}
+              </div>
+              <small class="field-hint">Enter the amount expected to land in each month. This drives Deals by month and Quarter view.</small>
+            </div>
+            <button class="primary wide" type="submit">Add sales deal</button>
+          </form>
+        </div>
+      </section>
+    </div>
+  `;
+}
+
+function collectiveDealDetailOverlay(deal) {
+  return `
+    <div class="crm-detail-overlay" data-collective-detail-overlay>
+      <section class="crm-detail-modal" role="dialog" aria-modal="true" aria-label="${htmlSafe(deal.company)} sales deal details">
+        <button class="crm-detail-close" type="button" data-collective-close-detail aria-label="Close deal details">×</button>
+        <div class="section-head">
+          <h2>${htmlSafe(deal.company)}</h2>
+          <span class="pill confirmed">${htmlSafe(deal.stage)}</span>
+        </div>
+        <div class="section-body">
+          <div class="crm-detail-grid">
+            <div class="crm-detail-title">
+              <strong>${htmlSafe(deal.dealName)}</strong>
+              <span>${money(collectiveDealTotal(deal))} · ${collectiveUserName(deal.ownerId)}</span>
+            </div>
+            ${collectiveDetailField(deal, "company", "Company")}
+            ${collectiveDetailField(deal, "dealName", "Deal name")}
+            <div class="field">
+              <label>Sales owner</label>
+              <select class="compact-select mini-select" data-collective-update="${deal.id}" data-field="ownerId" ${state.collectiveUser?.role === "admin" ? "" : "disabled"}>
+                ${collectiveSalesUsers.map((user) => `<option value="${user.id}" ${deal.ownerId === user.id ? "selected" : ""}>${user.name}</option>`).join("")}
+              </select>
+            </div>
+            <div class="field">
+              <label>Stage</label>
+              <select class="compact-select mini-select" data-collective-update="${deal.id}" data-field="stage">
+                ${collectiveStages.map((stage) => `<option value="${stage}" ${deal.stage === stage ? "selected" : ""}>${stage}</option>`).join("")}
+              </select>
+            </div>
+            ${collectiveDetailField(deal, "amount", "Deal amount", "money")}
+            <div class="field">
+              <label>Payment terms</label>
+              <select class="compact-select mini-select" data-collective-update="${deal.id}" data-field="paymentTerm">
+                ${paymentTerms.map((term) => `<option value="${term.value}" ${deal.paymentTerm === term.value ? "selected" : ""}>${term.label}</option>`).join("")}
+              </select>
+            </div>
+            ${collectiveDetailField(deal, "customPaymentDays", "Own time in days")}
+            ${collectiveDetailField(deal, "contactName", "Contact name")}
+            ${collectiveDetailField(deal, "emailContact", "Email addresses")}
+            <div class="field wide">
+              <label>Notes</label>
+              <textarea data-collective-update="${deal.id}" data-field="notes">${htmlSafe(deal.notes)}</textarea>
+            </div>
+            <div class="field wide">
+              <label>Payment schedule</label>
+              <div class="collective-payment-grid">
+                ${months.map((month, index) => `
+                  <label>
+                    <span>${month}</span>
+                    <input data-collective-month="${deal.id}" data-month="${index}" value="${Number((deal.monthValues || [])[index] || 0) || ""}" inputmode="decimal" />
+                  </label>
+                `).join("")}
+              </div>
+              <small class="field-hint">Scheduled total: ${money(collectiveScheduledTotal(deal))}</small>
+            </div>
+            <div class="field wide">
+              <label>Collective Xero</label>
+              <div class="xero-status-card">
+                <strong>${deal.xeroInvoiceId || "No draft invoice yet"}</strong>
+                <span>${deal.xeroStatus || "Uses the separate Cowshed Collective Xero connection in the real build."}</span>
+                <div class="section-actions">
+                  <button class="secondary" type="button" data-collective-xero-create="${deal.id}">${deal.xeroInvoiceId ? "Update draft in Collective Xero" : "Create draft in Collective Xero"}</button>
+                  ${deal.xeroInvoiceId ? `<button class="secondary" type="button" data-collective-xero-invoiced="${deal.id}">Mark invoiced</button>` : ""}
+                  ${deal.xeroInvoiceId ? `<button class="secondary" type="button" data-collective-xero-paid="${deal.id}">Mark paid/reconciled</button>` : ""}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  `;
+}
+
+function collectiveDetailField(deal, field, label, type = "text") {
+  const value = type === "money" ? currencyInput(deal[field]) : htmlSafe(deal[field] || "");
+  return `
+    <div class="field">
+      <label>${label}</label>
+      <input data-collective-update="${deal.id}" data-field="${field}" value="${value}" />
+    </div>
+  `;
+}
+
+function collectiveDealsByMonthView() {
+  const deals = collectiveFilteredDeals(false);
+  const monthlyTotals = months.map((_, index) => deals.reduce((total, deal) => total + Number((deal.monthValues || [])[index] || 0), 0));
+  const selectedMonth = state.collectiveMonthFilter === "all" ? null : Number(state.collectiveMonthFilter);
+  const monthDeals = selectedMonth === null ? [] : deals.filter((deal) => Number((deal.monthValues || [])[selectedMonth] || 0) > 0);
+  return `
+    ${collectiveHeader("Deals by month", "Expected cash due to land by payment month")}
+    <section class="section">
+      <div class="section-head">
+        <h2>Monthly cash view</h2>
+        <div class="section-actions">
+          <select class="compact-select" data-collective-month-filter>
+            <option value="all" ${state.collectiveMonthFilter === "all" ? "selected" : ""}>Show totals only</option>
+            ${months.map((month, index) => `<option value="${index}" ${state.collectiveMonthFilter === String(index) ? "selected" : ""}>${month}</option>`).join("")}
+          </select>
+          <span class="pill">${money(sum(monthlyTotals))}</span>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr>${months.map((month) => `<th>${month}</th>`).join("")}<th>Total</th></tr></thead>
+          <tbody>
+            <tr>${monthlyTotals.map((total, index) => `<td>${total ? `<button class="table-link" type="button" data-collective-month-jump="${index}">${money(total)}</button>` : "-"}</td>`).join("")}<td>${money(sum(monthlyTotals))}</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    ${selectedMonth !== null ? `
+      <section class="section soft-section">
+        <div class="section-head"><h2>${months[selectedMonth]} deal breakdown</h2><span class="pill">${money(monthlyTotals[selectedMonth])}</span></div>
+        <div class="section-body manager-list">
+          ${monthDeals.length ? monthDeals.map((deal) => `
+            <button class="deal-card" type="button" data-collective-detail="${deal.id}">
+              <div>
+                <strong>${htmlSafe(deal.company)}</strong>
+                <small>${htmlSafe(deal.dealName)} · ${collectiveUserName(deal.ownerId)} · ${deal.stage}</small>
+              </div>
+              <strong>${money((deal.monthValues || [])[selectedMonth])}</strong>
+            </button>
+          `).join("") : `<div class="notice">No scheduled cash for this month.</div>`}
+        </div>
+      </section>
+    ` : ""}
+    ${collectiveSelectedDealOverlay()}
+  `;
+}
+
+function collectiveQuarterView() {
+  const deals = collectiveFilteredDeals(false);
+  const quarterLabels = ["Q1", "Q2", "Q3", "Q4"];
+  const quarterValues = [0, 1, 2, 3].map((quarterIndex) => deals.reduce((total, deal) => {
+    const start = quarterIndex * 3;
+    return total + sum((deal.monthValues || []).slice(start, start + 3));
+  }, 0));
+  return `
+    ${collectiveHeader("Quarter view", "Quarterly sales and expected payment timing")}
+    <section class="section">
+      <div class="section-head"><h2>Quarter totals</h2><span class="pill">${money(sum(quarterValues))}</span></div>
+      <div class="quarter-grid">
+        ${quarterLabels.map((label, index) => `
+          <div class="quarter-tile">
+            <span>${label}</span>
+            <strong>${money(quarterValues[index])}</strong>
+          </div>
+        `).join("")}
+      </div>
+    </section>
+    <section class="section soft-section">
+      <div class="section-head"><h2>Deals by quarter</h2><span class="pill">${deals.length} deals</span></div>
+      <div class="section-body collective-quarter-list">
+        ${quarterLabels.map((label, index) => {
+          const start = index * 3;
+          const quarterDeals = deals.filter((deal) => sum((deal.monthValues || []).slice(start, start + 3)) > 0);
+          return `
+            <div class="quarter-column">
+              <h3>${label}</h3>
+              ${quarterDeals.length ? quarterDeals.map((deal) => `
+                <button class="deal-card" type="button" data-collective-detail="${deal.id}">
+                  <div>
+                    <strong>${htmlSafe(deal.company)}</strong>
+                    <small>${htmlSafe(deal.dealName)} · ${deal.stage}</small>
+                  </div>
+                  <strong>${money(sum((deal.monthValues || []).slice(start, start + 3)))}</strong>
+                </button>
+              `).join("") : `<div class="notice">No payments scheduled.</div>`}
+            </div>
+          `;
+        }).join("")}
+      </div>
+    </section>
+    ${collectiveSelectedDealOverlay()}
+  `;
+}
+
+function collectiveSelectedDealOverlay() {
+  const deal = state.collectiveDeals.find((item) => item.id === state.collectiveSelectedDealId);
+  return deal ? collectiveDealDetailOverlay(deal) : "";
 }
 
 function allowedViews() {
@@ -7687,6 +8560,321 @@ function bindLogin() {
     state.activeView = state.user.role === "admin" ? "pl-live" : "crm";
     app();
   });
+  document.querySelectorAll("[data-back-to-portals]").forEach((button) => {
+    button.addEventListener("click", backToPortalChoice);
+  });
+}
+
+function bindPortalChoice() {
+  document.querySelectorAll("[data-portal-select]").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.portal = button.dataset.portalSelect;
+      state.user = null;
+      state.collectiveUser = null;
+      app();
+    });
+  });
+}
+
+function backToPortalChoice() {
+  state.portal = null;
+  state.user = null;
+  state.collectiveUser = null;
+  app();
+}
+
+function bindCollectiveLogin() {
+  document.querySelector("[data-collective-login-form]").addEventListener("submit", (event) => {
+    event.preventDefault();
+    const form = new FormData(event.currentTarget);
+    state.collectiveUser = collectiveSalesUsers.find((user) => user.id === form.get("profile")) || collectiveSalesUsers[0];
+    state.activeCollectiveView = "collective-crm";
+    state.collectiveOwnerFilter = "all";
+    state.collectiveStageFilter = "all";
+    app();
+  });
+  document.querySelectorAll("[data-back-to-portals]").forEach((button) => {
+    button.addEventListener("click", backToPortalChoice);
+  });
+}
+
+function bindCollectiveShell() {
+  document.querySelectorAll("[data-collective-view]").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.activeCollectiveView = button.dataset.collectiveView;
+      state.collectiveSelectedDealId = null;
+      app();
+    });
+  });
+
+  document.querySelectorAll("[data-back-to-portals]").forEach((button) => {
+    button.addEventListener("click", backToPortalChoice);
+  });
+
+  const logout = document.querySelector("[data-collective-logout]");
+  if (logout) {
+    logout.addEventListener("click", () => {
+      state.collectiveUser = null;
+      app();
+    });
+  }
+
+  document.querySelectorAll("[data-collective-filter]").forEach((select) => {
+    select.addEventListener("change", () => {
+      if (select.dataset.collectiveFilter === "owner") state.collectiveOwnerFilter = select.value;
+      if (select.dataset.collectiveFilter === "stage") state.collectiveStageFilter = select.value;
+      state.collectiveSelectedDealId = null;
+      app();
+    });
+  });
+
+  const monthFilter = document.querySelector("[data-collective-month-filter]");
+  if (monthFilter) {
+    monthFilter.addEventListener("change", () => {
+      state.collectiveMonthFilter = monthFilter.value;
+      state.collectiveSelectedDealId = null;
+      app();
+    });
+  }
+
+  document.querySelectorAll("[data-collective-month-jump]").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.collectiveMonthFilter = button.dataset.collectiveMonthJump;
+      app();
+    });
+  });
+
+  document.querySelectorAll("[data-collective-add-toggle]").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.collectiveAddOpen = !state.collectiveAddOpen;
+      app();
+    });
+  });
+
+  document.querySelectorAll("[data-collective-add-close]").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.collectiveAddOpen = false;
+      app();
+    });
+  });
+
+  document.querySelectorAll("[data-collective-add-overlay]").forEach((overlay) => {
+    overlay.addEventListener("click", (event) => {
+      if (event.target !== overlay) return;
+      state.collectiveAddOpen = false;
+      app();
+    });
+  });
+
+  const dealForm = document.querySelector("[data-collective-deal-form]");
+  if (dealForm) {
+    dealForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      addCollectiveDeal(new FormData(event.currentTarget));
+    });
+  }
+
+  document.querySelectorAll("[data-collective-detail]").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.collectiveSelectedDealId = button.dataset.collectiveDetail;
+      app();
+    });
+  });
+
+  document.querySelectorAll("[data-collective-close-detail]").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.collectiveSelectedDealId = null;
+      app();
+    });
+  });
+
+  document.querySelectorAll("[data-collective-detail-overlay]").forEach((overlay) => {
+    overlay.addEventListener("click", (event) => {
+      if (event.target !== overlay) return;
+      state.collectiveSelectedDealId = null;
+      app();
+    });
+  });
+
+  document.querySelectorAll("[data-collective-drag]").forEach((card) => {
+    card.addEventListener("dragstart", (event) => {
+      event.dataTransfer.setData("text/plain", card.dataset.collectiveDrag);
+      event.dataTransfer.effectAllowed = "move";
+      card.classList.add("dragging");
+    });
+    card.addEventListener("dragend", () => {
+      card.classList.remove("dragging");
+      document.querySelectorAll(".crm-drop-active").forEach((column) => column.classList.remove("crm-drop-active"));
+    });
+  });
+
+  document.querySelectorAll("[data-collective-stage-drop]").forEach((column) => {
+    column.addEventListener("dragover", (event) => {
+      event.preventDefault();
+      column.classList.add("crm-drop-active");
+      event.dataTransfer.dropEffect = "move";
+    });
+    column.addEventListener("dragleave", () => {
+      column.classList.remove("crm-drop-active");
+    });
+    column.addEventListener("drop", (event) => {
+      event.preventDefault();
+      column.classList.remove("crm-drop-active");
+      moveCollectiveDealToStage(event.dataTransfer.getData("text/plain"), column.dataset.collectiveStageDrop);
+    });
+  });
+
+  document.querySelectorAll("[data-collective-update]").forEach((field) => {
+    if (field.dataset.field === "amount") {
+      field.addEventListener("focus", () => {
+        field.value = String(parseCurrency(field.value));
+        field.select();
+      });
+    }
+    const eventName = field.tagName === "SELECT" ? "change" : "blur";
+    field.addEventListener(eventName, () => updateCollectiveDealField(field));
+    field.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" && field.tagName !== "TEXTAREA") {
+        event.preventDefault();
+        updateCollectiveDealField(field);
+      }
+    });
+  });
+
+  document.querySelectorAll("[data-collective-month]").forEach((input) => {
+    input.addEventListener("focus", () => input.select());
+    input.addEventListener("blur", () => updateCollectiveDealMonth(input));
+    input.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        updateCollectiveDealMonth(input);
+      }
+    });
+  });
+
+  document.querySelectorAll("[data-collective-xero-create]").forEach((button) => {
+    button.addEventListener("click", () => createCollectiveXeroDraft(button.dataset.collectiveXeroCreate));
+  });
+
+  document.querySelectorAll("[data-collective-xero-invoiced]").forEach((button) => {
+    button.addEventListener("click", () => markCollectiveXeroInvoiced(button.dataset.collectiveXeroInvoiced));
+  });
+
+  document.querySelectorAll("[data-collective-xero-paid]").forEach((button) => {
+    button.addEventListener("click", () => markCollectiveXeroPaid(button.dataset.collectiveXeroPaid));
+  });
+}
+
+function addCollectiveDeal(formData) {
+  const ownerId = state.collectiveUser?.role === "admin"
+    ? (formData.get("ownerId") || state.collectiveUser.id)
+    : state.collectiveUser.id;
+  const monthValues = months.map((_, index) => parseCurrency(formData.get(`month-${index}`)));
+  const amount = parseCurrency(formData.get("amount")) || sum(monthValues);
+  const deal = {
+    id: `collective-${Date.now()}`,
+    ownerId,
+    company: String(formData.get("company") || "").trim(),
+    dealName: String(formData.get("dealName") || "").trim(),
+    contactName: String(formData.get("contactName") || "").trim(),
+    emailContact: normalizeEmailContacts(formData.get("emailContact")),
+    stage: collectiveStages.includes(formData.get("stage")) ? formData.get("stage") : "Conversation",
+    amount,
+    paymentTerm: paymentTerms.some((term) => term.value === formData.get("paymentTerm")) ? formData.get("paymentTerm") : "30",
+    customPaymentDays: Math.max(0, Number(formData.get("customPaymentDays") || 0)),
+    monthValues,
+    xeroOrg: "Cowshed Collective Sales",
+    xeroInvoiceId: "",
+    xeroStatus: "",
+    xeroCreatedAt: "",
+    xeroPaidAt: "",
+    notes: String(formData.get("notes") || "").trim(),
+    updatedAt: new Date().toISOString()
+  };
+  if (!deal.company || !deal.dealName) return;
+  state.collectiveDeals.push(deal);
+  state.collectiveAddOpen = false;
+  state.collectiveSelectedDealId = deal.id;
+  saveState();
+  app();
+}
+
+function updateCollectiveDealField(field) {
+  const deal = state.collectiveDeals.find((item) => item.id === field.dataset.collectiveUpdate);
+  if (!deal) return;
+  const key = field.dataset.field;
+  if (key === "amount") {
+    deal.amount = parseCurrency(field.value);
+  } else if (key === "ownerId" && state.collectiveUser?.role === "admin" && collectiveSalesUsers.some((user) => user.id === field.value)) {
+    deal.ownerId = field.value;
+  } else if (key === "stage" && collectiveStages.includes(field.value)) {
+    deal.stage = field.value;
+  } else if (key === "paymentTerm" && paymentTerms.some((term) => term.value === field.value)) {
+    deal.paymentTerm = field.value;
+  } else if (key === "customPaymentDays") {
+    deal.customPaymentDays = Math.max(0, Number(field.value || 0));
+  } else if (key === "emailContact") {
+    deal.emailContact = normalizeEmailContacts(field.value);
+  } else if (["company", "dealName", "contactName", "notes"].includes(key)) {
+    deal[key] = String(field.value || "").trim();
+  }
+  deal.updatedAt = new Date().toISOString();
+  saveState();
+  app();
+}
+
+function updateCollectiveDealMonth(input) {
+  const deal = state.collectiveDeals.find((item) => item.id === input.dataset.collectiveMonth);
+  if (!deal) return;
+  const monthIndex = Math.min(11, Math.max(0, Number(input.dataset.month || 0)));
+  deal.monthValues[monthIndex] = parseCurrency(input.value);
+  deal.updatedAt = new Date().toISOString();
+  saveState();
+  app();
+}
+
+function moveCollectiveDealToStage(dealId, stage) {
+  const deal = state.collectiveDeals.find((item) => item.id === dealId);
+  if (!deal || !collectiveStages.includes(stage)) return;
+  deal.stage = stage;
+  deal.updatedAt = new Date().toISOString();
+  saveState();
+  app();
+}
+
+function createCollectiveXeroDraft(dealId) {
+  const deal = state.collectiveDeals.find((item) => item.id === dealId);
+  if (!deal) return;
+  deal.xeroInvoiceId = deal.xeroInvoiceId || `CC-XERO-DRAFT-${Math.floor(1000 + Math.random() * 9000)}`;
+  deal.xeroStatus = "Draft invoice created in Collective Xero";
+  deal.xeroCreatedAt = new Date().toISOString();
+  if (deal.stage === "Conversation" || deal.stage === "Negotiation" || deal.stage === "Contract Signed") {
+    deal.stage = "To Be Invoiced";
+  }
+  deal.updatedAt = new Date().toISOString();
+  saveState();
+  app();
+}
+
+function markCollectiveXeroInvoiced(dealId) {
+  const deal = state.collectiveDeals.find((item) => item.id === dealId);
+  if (!deal) return;
+  deal.xeroStatus = "Invoiced in Collective Xero";
+  deal.stage = "Invoiced";
+  deal.updatedAt = new Date().toISOString();
+  saveState();
+  app();
+}
+
+function markCollectiveXeroPaid(dealId) {
+  const deal = state.collectiveDeals.find((item) => item.id === dealId);
+  if (!deal) return;
+  deal.xeroStatus = "Paid and reconciled in Collective Xero";
+  deal.xeroPaidAt = new Date().toISOString();
+  deal.stage = "Paid";
+  deal.updatedAt = new Date().toISOString();
+  saveState();
+  app();
 }
 
 function pushUndo(action) {
@@ -7774,6 +8962,10 @@ function bindShell() {
   document.querySelector("[data-logout]").addEventListener("click", () => {
     state.user = null;
     app();
+  });
+
+  document.querySelectorAll("[data-back-to-portals]").forEach((button) => {
+    button.addEventListener("click", backToPortalChoice);
   });
 
   document.querySelectorAll("[data-undo]").forEach((button) => {
