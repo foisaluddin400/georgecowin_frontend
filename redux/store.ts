@@ -1,13 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import authReducer from "./features/auth/authSlice";
+import sessionReducer from "./features/session/sessionSlice";
 import layoutReducer from "./features/layout/layoutSlice";
-import adminReducer from "./features/admin/adminSlice";
 
 export const store = configureStore({
   reducer: {
-    auth: authReducer,
+    session: sessionReducer,
     layout: layoutReducer,
-    admin: adminReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
